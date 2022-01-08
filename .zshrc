@@ -113,9 +113,8 @@ export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Colorls
-source $(dirname $(gem which colorls))/tab_complete.sh
-alias ls="colorls"
+alias ls="colorls -G"
 alias tree="colorls --tree"
 
-# compinit
-autoload -U compinit && compinit
+# dotfils-tools
+alias dft="~/scripts/dotfiles-tools.sh"
