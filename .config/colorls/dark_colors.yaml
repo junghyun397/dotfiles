@@ -1,6 +1,6 @@
 # Main Colors
 unrecognized_file: default
-recognized_file:   yellow
+recognized_file:   default
 executable_file:   green
 dir:               blue
 

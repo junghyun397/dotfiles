@@ -4,11 +4,11 @@ Configuration files for Debian Systems
 ## Getting Started
 
 ```shell
-desktop
+# desktop
 ```
 
 ```shell
-laptop
+# laptop
 ```
 
 ## Dotfiles Tools
