@@ -1,5 +1,6 @@
 " SYSTEM
 set nocompatible
+set belloff=all
 
 " SEARCH
 set ic
@@ -14,6 +15,7 @@ set nu
 " LOCAL
 syntax on
 set noshowmode
+set title
 
 " INDENT
 filetype plugin indent on

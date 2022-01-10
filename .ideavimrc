@@ -1,3 +1,6 @@
+" SYSTEM
+set belloff=all
+
 " SEARCH
 set ic
 set is
