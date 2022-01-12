@@ -1,16 +1,15 @@
 #!/bin/bash
 
-# ./.dotfiles-tools.sh add $DOTFILE
-if [[ "$1" == "add" ]]
+if [ "$1" == "add" ]
 then
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add $2
-# ./.dotfiles-tools.sh push $MESSAGE
-elif [[ "$1" == "push" ]]
+    echo "$2"
+elif [ "$1" == "push" ]
 then
     device=git --git-dir=$HOME/.dotfiles/ rev-parse --abbrev-ref HEAD
 
     msg="update dotfiles `date`"
-    if [[ $# -eq 2 ]]
+    if [ $# -eq 2 ]
     then 
         msg="$2"
     fi
