@@ -1,24 +1,25 @@
 #!/bin/bash
 
+# FUNCTIONS
+
 function terminal_bell() {
     echo -e "\07"
 }
 
 function with_tmp() {
+    cd /tmp
+    $1
+    cd ~
 }
 
-# ====================
+# BASICS
 
 function init_apt() {
     sudo apt update
     sudo apt upgrade -y
 }
 
-function purge_snap() {
-    sudo apt autoremove --purge snapd
-}
-
-# ====================
+# SETUP/INSTALL
 
 function install_basics() {
     sudo apt install -y openssh-server git curl screen net-tools pm-utils
@@ -46,17 +47,15 @@ function placement_dotfiles() {
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 }
 
-function install_ime() {
+function setup_uim_byeoru() {
     sudo apt install -y uim uim-byeoru
 }
 
-function setup_keyd() {
-    cd /tmp
+function setup_keyd() { # need /tmp
     git clone https://github.com/rvaiya/keyd
     cd keyd
     make && sudo make install
-    cd ~
-    ln .keyd.conf /etc/keyd/default.conf
+    ln ~/.keyd.conf /etc/keyd/default.conf
     sudo systemctl enable keyd
     sudo systemctl start keyd
 }
@@ -169,19 +168,18 @@ function install_spotify() {
     sudo apt install -y spotify-client
 }
 
-function setup_spotify_tui() {
-    cd /tmp
+function setup_spotify_tui() { # need /tmp
     git clone https://github.com/Rigellute/spotify-tui.git
     cd spotify-tui
     cargo install spotify-tui
-    cd ~
+
     wget https://raw.githubusercontent.com/Rigellute/spotify-tui/f68e0e9621640629f29883b9321624f84f40eff2/snap/gui/spt.desktop -P ~/.local/share/applications
     terminal_bell
     spt
 }
 
 function install_discord() {
-    sudo ~/scripts/update-discord.sh
+    ~/scripts/update-discord.sh
 }
 
 function install_vlc() {
@@ -210,7 +208,22 @@ function install_bottom {
     sudo dpkg -i bottom_0.6.4_amd64.deb
 }
 
-# ====================
+function install_kakaotalk {
+   ~/scripts/setup/kakaotalk.sh 
+}
+
+# FIXES
+
+function disable_cups_printer {
+    sudo systemctl stop cups-browsed
+    sudo systemctl disable cups-browsed
+}
+
+function purge_snap() {
+    sudo apt autoremove --purge snapd
+}
+
+# MAIN
 
 DEVICE="desktop"
 echo "ENVIRONMENT? [DESKTOP/laptop]"
@@ -222,5 +235,3 @@ fi
 
 cd ~
 
-init_apt
-purge_snap
