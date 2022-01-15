@@ -2,6 +2,10 @@
 
 # FUNCTIONS
 
+function package_available() {
+    return apt show $1
+}
+
 function terminal_bell() {
     echo -e "\07"
 }
@@ -10,6 +14,13 @@ function with_tmp() {
     cd /tmp
     $1
     cd ~
+}
+
+function ask_excution() {
+    if [ ! "$awnser" == "n" ]
+    then
+        $1
+    fi
 }
 
 # BASICS
@@ -208,7 +219,7 @@ function install_bottom {
     sudo dpkg -i bottom_0.6.4_amd64.deb
 }
 
-function install_kakaotalk {
+function setup_kakaotalk {
    ~/scripts/setup/kakaotalk.sh 
 }
 
@@ -233,5 +244,32 @@ then
     $DEVICE = "laptop"
 fi
 
-cd ~
+init_apt
 
+install_basics
+install_build_bins
+install_build_tools
+install_package_managers
+install_utils
+
+placement_dotfiles
+
+setup_uim_byeoru
+setup_keyd
+
+setup_zsh
+setup_oh_mu_zsh
+
+install_vim
+setup_vundle
+
+install_gnome_basics
+install_gnome_extensions
+setup_gnome_terminal
+
+setup_github
+setup_spotify_tui
+setup_kakaotalk
+
+disable_cups_printer
+purge_snap

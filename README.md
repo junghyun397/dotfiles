@@ -31,7 +31,7 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 
 ## Dotfiles Tool
 
-Alias ``dft`` for ``[scripts/dotfiles-tool.sh](https://github.com/junghyun397/dotfiles/blob/desktop/scripts/dotfiles-tool.sh)``
+Alias ``dft`` for [``scripts/dotfiles-tool.sh``](https://github.com/junghyun397/dotfiles/blob/desktop/scripts/dotfiles-tool.sh)
 
 ### Add an file
 
