@@ -2,8 +2,11 @@
 
 # FUNCTIONS
 
-function package_available() {
-    return apt show $1
+function add_ppa_if_absent() {
+    if [ apt show $1 ]
+    then
+        sudo add-apt-repository -y $2
+    fi
 }
 
 function terminal_bell() {
@@ -16,8 +19,12 @@ function with_tmp() {
     cd ~
 }
 
-function ask_excution() {
-    if [ ! "$awnser" == "n" ]
+function ask_execution() {
+    terminal_bell
+    echo "EXECUTE $2? [Y/n]"
+    read awnser
+
+    if ! [ "$awnser" == "n" ]
     then
         $1
     fi
@@ -53,7 +60,7 @@ function install_utils() {
 }
 
 function placement_dotfiles() {
-    git clone -b $DEVICE --bare https://github.com/junghyun397/dotfiles.git $HOME/.dotfiles
+    git clone -b $1 --bare https://github.com/junghyun397/dotfiles.git $HOME/.dotfiles
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 }
@@ -69,34 +76,6 @@ function setup_keyd() { # need /tmp
     ln ~/.keyd.conf /etc/keyd/default.conf
     sudo systemctl enable keyd
     sudo systemctl start keyd
-}
-
-function setup_zsh() {
-    sudo apt install zsh
-    chsh -s /usr/bin/zsh
-}
-
-function setup_oh_my_zsh() {
-    # Oh-My-Zsh
-    wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-
-    # Zsh-syntax-highlighting
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-    # Powerlevel10k
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-    # colorls
-    sudo gem install -y colorls
-}
-
-function install_vim() {
-    sudo apt install -y vim-gtk3
-}
-
-function setup_vundle() {
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    vim +PluginInstall +qall
 }
 
 function install_gnome_basics() {
@@ -119,20 +98,6 @@ function setup_github() {
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
     sudo apt update
     sudo apt -y install gh
-}
-
-function setup_docker() {
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-    sudo apt update
-    sudo apt install -y docker-ce docker-ce-cli
-
-    sudo groupadd docker
-    sudo usermod -aG docker $USER
-
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
 }
 
 function install_java() {
@@ -172,34 +137,16 @@ function install_tex() {
     sudo apt install -y texlive-latex-recommended texlive-latex-recommended-doc
 }
 
-function install_spotify() {
-    curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
-    echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-    sudo apt update
-    sudo apt install -y spotify-client
-}
-
-function setup_spotify_tui() { # need /tmp
-    git clone https://github.com/Rigellute/spotify-tui.git
-    cd spotify-tui
-    cargo install spotify-tui
-
-    wget https://raw.githubusercontent.com/Rigellute/spotify-tui/f68e0e9621640629f29883b9321624f84f40eff2/snap/gui/spt.desktop -P ~/.local/share/applications
-    terminal_bell
-    spt
-}
-
-function install_discord() {
-    ~/scripts/update-discord.sh
-}
-
 function install_vlc() {
     sudo apt install -y vlc
 }
 
 function install_gimp() {
-    sudo add-apt-repository -y ppa:ubuntuhandbook1/gimp
-    sudo apt update
+    if check_package_available gimp
+    then
+        sudo add-apt-repository -y ppa:ubuntuhandbook1/gimp
+        sudo apt update
+    fi
     sudo apt install -y gimp
 }
 
@@ -219,11 +166,12 @@ function install_bottom {
     sudo dpkg -i bottom_0.6.4_amd64.deb
 }
 
-function setup_kakaotalk {
-   ~/scripts/setup/kakaotalk.sh 
-}
-
 # FIXES
+
+function disable_gnome_hot_keys {
+    gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
+    for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-application-${i} "[]"; done
+}
 
 function disable_cups_printer {
     sudo systemctl stop cups-browsed
@@ -236,12 +184,12 @@ function purge_snap() {
 
 # MAIN
 
-DEVICE="desktop"
+device="desktop"
 echo "ENVIRONMENT? [DESKTOP/laptop]"
 read awnser
 if [ "$awnser" == "laptop"]
 then
-    $DEVICE = "laptop"
+    $device = "laptop"
 fi
 
 init_apt
@@ -252,7 +200,7 @@ install_build_tools
 install_package_managers
 install_utils
 
-placement_dotfiles
+placement_dotfiles $device
 
 setup_uim_byeoru
 setup_keyd

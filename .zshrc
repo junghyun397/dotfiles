@@ -105,8 +105,12 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Colorls
-alias ls="colorls -G"
-alias tree="colorls --tree"
+alias ls="lsd"
+alias tree="lsd --tree"
 
 # dotfils-tool
 alias dft="~/scripts/dotfiles-tool.sh"
+
+# openrgb
+alias rgbon="openrgb --profile blue"
+alias b6gd="openrgb --profile b6gd"
