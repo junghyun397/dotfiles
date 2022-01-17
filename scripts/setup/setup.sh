@@ -65,19 +65,6 @@ function placement_dotfiles() {
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 }
 
-function setup_uim_byeoru() {
-    sudo apt install -y uim uim-byeoru
-}
-
-function setup_keyd() { # need /tmp
-    git clone https://github.com/rvaiya/keyd
-    cd keyd
-    make && sudo make install
-    ln ~/.keyd.conf /etc/keyd/default.conf
-    sudo systemctl enable keyd
-    sudo systemctl start keyd
-}
-
 function install_gnome_basics() {
     sudo apt install -y xdotool x11-xserver-utils gnome-tweak-tool gnome-shell-extensions
 }
@@ -163,7 +150,7 @@ function setup_wireshark() {
 
 function install_bottom {
     curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.4/bottom_0.6.4_amd64.deb
-    sudo dpkg -i bottom_0.6.4_amd64.deb
+    sudo gdebi bottom_0.6.4_amd64.deb
 }
 
 # FIXES

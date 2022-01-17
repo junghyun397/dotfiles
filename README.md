@@ -9,13 +9,13 @@ Test matrix:
 
 | Distro | Hardware | Issue |
 | ------ | -------- | ----- |
-| Ubuntu 20.04 | VirtualBox amd64 | NONE |
-| Ubuntu 20.04 | Ryzen + Nvidia Desktop | NONE |
-| Ubuntu 20.04 | DELL XPS 13 9310 OLED | NONE |
+| Ubuntu 20.04 | VirtualBox amd64 | ✅ |
+| Pop!_OS 21.10 | Ryzen + Nvidia Desktop | ✅ |
+| Pop!_OS 21.10 | DELL XPS 13 9350 UHD | ✅@``laptop BRANCH`` |
 
 ## Getting Started
 
-via script
+Via script
 
 ```shell
 wget https://raw.githubusercontent.com/junghyun397/dotfiles/desktop/scripts/setup/setup.sh -O - | bash
