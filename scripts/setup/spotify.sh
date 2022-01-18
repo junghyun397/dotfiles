@@ -11,7 +11,8 @@ git clone https://github.com/Rigellute/spotify-tui.git
 cd spotify-tui
 cargo install spotify-tui
 
-wget https://raw.githubusercontent.com/Rigellute/spotify-tui/f68e0e9621640629f29883b9321624f84f40eff2/snap/gui/spt.desktop -P ~/.local/share/applications
+cp .raws/spt.desktop .local/share/applications/spt.desktop
+sed -i "s;uname;$USERNAME;g" .local/share/applications/spt.desktop
 terminal_bell
 spt
 

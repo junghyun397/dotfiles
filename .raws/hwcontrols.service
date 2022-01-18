@@ -1,0 +1,14 @@
+[Unit]
+Description=AIO/LED initialize service
+
+[Service]
+Type=oneshot
+ExecStart=sleep 10
+ExecStart=liquidctl initialize --pump-mode quiet
+ExecStart=liquidctl set fan speed 40 10 50 20 60 30 65 40
+ExecStart=liquidctl set fan1 speed 40 10 50 20 60 30 65 40
+ExecStart=openrgb --config / --profile /home/uname/.config/OpenRGB/blue.orp
+
+[Install]
+WantedBy=default.target
+

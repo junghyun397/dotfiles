@@ -69,17 +69,6 @@ function install_gnome_basics() {
     sudo apt install -y xdotool x11-xserver-utils gnome-tweak-tool gnome-shell-extensions
 }
 
-function install_gnome_extensions() {
-    terminal_bell
-    xdg-open https://extensions.gnome.org/extension/1319/gsconnect/
-    xdg-open https://extensions.gnome.org/extension/1287/unite/
-    xdg-open https://extensions.gnome.org/extension/3222/block-caribou-36/
-}
-
-function setup_gnome_terminal() {
-    gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
-}
-
 function setup_github() {
     curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
