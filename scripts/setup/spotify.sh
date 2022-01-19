@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Spotify
-curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.listspt.desktop
 sudo apt update
 sudo apt install -y spotify-client
 
@@ -11,7 +11,7 @@ git clone https://github.com/Rigellute/spotify-tui.git
 cd spotify-tui
 cargo install spotify-tui
 
-cp .raws/spt.desktop .local/share/applications/spt.desktop
+cp ~/.raws/spt.desktop ~/.local/share/applications/spt.desktop
 sed -i "s;uname;$USERNAME;g" .local/share/applications/spt.desktop
 terminal_bell
 spt

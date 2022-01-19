@@ -2,6 +2,10 @@
 
 # FUNCTIONS
 
+function terminal_bell() {
+    echo -e "\07"
+}
+
 function add_ppa_if_absent_then_install() {
     if ! apt show $1
     then
@@ -9,10 +13,6 @@ function add_ppa_if_absent_then_install() {
         sudo apt update
     fi
     sudo apt install -y $1
-}
-
-function terminal_bell() {
-    echo -e "\07"
 }
 
 function ask_execution() {
@@ -40,7 +40,7 @@ function install_basics() {
 }
 
 function install_build_bins() {
-    sudo apt install -y libdbus-1-dev libssl-dev 
+    sudo apt install -y libdbus-1-dev libssl-dev libudev-dev
 }
 
 function install_build_tools() {
@@ -62,7 +62,7 @@ function placement_dotfiles() {
 }
 
 function install_gnome_basics() {
-    sudo apt install -y xdotool x11-xserver-utils gnome-tweak-tool gnome-shell-extensions
+    sudo apt install -y xdotool x11-xserver-utils gnome-tweak gnome-shell-extensions
 }
 
 function setup_github() {
@@ -150,9 +150,9 @@ function purge_snap() {
 device="desktop"
 echo "ENVIRONMENT? [DESKTOP/laptop]"
 read awnser
-if [ "$awnser" == "laptop"]
+if [ "$awnser" == "laptop" ]
 then
-    $device = "laptop"
+    device="laptop"
 fi
 
 cd ~
@@ -169,15 +169,15 @@ install_gnome_basics
 
 placement_dotfiles $device
 
-~/script/setup/zsh.sh
-~/script/setup/vim.sh
-~/script/setup/ime.sh
+~/scripts/setup/zsh.sh
+~/scripts/setup/vim.sh
+~/scripts/setup/ime.sh
 
-~/script/setup/docker.sh
+~/scripts/setup/docker.sh
 
-~/script/setup/fonts.sh
-~/script/setup/spotify.sh
-~/script/setup/discord.sh
+~/scripts/setup/fonts.sh
+~/scripts/setup/spotify.sh
+~/scripts/setup/discord.sh
 
 install_wireshark
 install_bottom
@@ -192,8 +192,8 @@ install_tex
 
 setup_github
 
-ask_excution ~/scripts/setup/rice-gnome.sh "RICE GNOME"
-ask_excution disable_cups_printer "DISABLE AUTO DISCOVER PRINTERS"
-ask_excution purge_snap "PURGE SNAPD"
+ask_execution ~/scripts/setup/rice-gnome.sh "RICE GNOME"
+ask_execution disable_cups_printer "DISABLE AUTO DISCOVER PRINTERS"
+ask_execution purge_snap "PURGE SNAPD"
 
 echo "DONE! DONT FORGET RESTART."
