@@ -2,21 +2,17 @@
 
 # FUNCTIONS
 
-function add_ppa_if_absent() {
-    if [ apt show $1 ]
+function add_ppa_if_absent_then_install() {
+    if ! [ apt show $1 ]
     then
         sudo add-apt-repository -y $2
+        sudo apt update
     fi
+    sudo apt install -y $1
 }
 
 function terminal_bell() {
     echo -e "\07"
-}
-
-function with_tmp() {
-    cd /tmp
-    $1
-    cd ~
 }
 
 function ask_execution() {
@@ -118,18 +114,11 @@ function install_vlc() {
 }
 
 function install_gimp() {
-    if check_package_available gimp
-    then
-        sudo add-apt-repository -y ppa:ubuntuhandbook1/gimp
-        sudo apt update
-    fi
-    sudo apt install -y gimp
+    add_ppa_if_absent_then_install gimp ppa:ubuntuhandbook1/gimp
 }
 
 function install_blender {
-    sudo add-apt-repository -y ppa:thomas-schiex/blender
-    sudo apt update
-    sudo apt install -y blender
+    add_ppa_if_absent_then_install blender ppa:thomas-schiex/blender
 }
 
 function setup_wireshark() {
@@ -143,11 +132,6 @@ function install_bottom {
 }
 
 # FIXES
-
-function disable_gnome_hot_keys {
-    gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
-    for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-application-${i} "[]"; done
-}
 
 function disable_cups_printer {
     sudo systemctl stop cups-browsed
@@ -176,24 +160,33 @@ install_build_tools
 install_package_managers
 install_utils
 
+install_gnome_basics
+
 placement_dotfiles $device
 
-setup_uim_byeoru
-setup_keyd
+~/script/setup/zsh.sh
+~/script/setup/vim.sh
+~/script/setup/ime.sh
 
-setup_zsh
-setup_oh_mu_zsh
+~/script/setup/docker.sh
 
-install_vim
-setup_vundle
+~/script/setup/fonts.sh
+~/script/setup/spotify.sh
+~/script/setup/discord.sh
 
-install_gnome_basics
-install_gnome_extensions
-setup_gnome_terminal
+install_wireshark
+install_bottom
+
+install_chrome
+install_jetbrains_toolbox
+install_vlc
+install_gimp
+install_blender
+
+install_tex
 
 setup_github
-setup_spotify_tui
-setup_kakaotalk
 
-disable_cups_printer
-purge_snap
+ask_excution ~/scripts/setup/rice-gnome.sh "RICE GNOME"
+ask_excution disable_cups_printer "DISABLE AUTO DISCOVER PRINTERS"
+ask_excution purge_snap "PURGE SNAPD"

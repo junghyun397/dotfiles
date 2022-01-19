@@ -1,8 +1,10 @@
 # dotfiles
+![desktop](.images/cover.png)
+
 Personal Configuration files for Debian Systems
 
 
-``Ubuntu(Pop!_OS)`` ``X11`` with ``GNOME 40``: ``zsh``, ``vim``, ``uim``, ``docker``, ``hw-controls``, ``kakaotalk``, etc.
+``Ubuntu(Pop!_OS)`` ``X11`` with ``GNOME 40``: ``zsh``, ``vim``, ``uim-byeoru``, ``docker``, ``hw-controls``, ``kakaotalk``, etc.
 
 
 Test matrix:
@@ -11,7 +13,7 @@ Test matrix:
 | ------ | -------- | ------ | ----- |
 | Ubuntu 20.04 | VirtualBox amd64 | ``desktop`` | :heavy_check_mark: |
 | Pop!_OS 21.10 | Ryzen + Nvidia Desktop[^desktop-specification] | ``desktop`` | :heavy_check_mark: |
-| Pop!_OS 21.10 | DELL XPS 13 9350 UHD | ``laptop``[^laptop-specification] | ``laptop`` | :heavy_check_mark: |
+| Pop!_OS 21.10 | DELL XPS 13 9350 UHD[^laptop-specification] | ``laptop`` | :heavy_check_mark: |
 
 [^desktop-specification]: AMD Ryzen 1700, Nvidia Geforce GTX1080, Samsung DDR4 32GB, ASUS Crosshair VI, HP EX920 NVMe 1TB, Corsair H100i pro XT
 [^laptop-specification]: Intel i7-6560u, DDR4 8GB, UHD touch 3200x1800
@@ -31,6 +33,17 @@ git clone -b $DEVICE --bare https://github.com/junghyun397/dotfiles.git $HOME/.d
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 ```
+
+## Keyboard Layout
+
+Powered by keyd
+
+![1800-keyboard](.images/keyboard-layout.png)
+= 1800 or CP Layout Keyboard bindings
+
+
+![standard-keyboard](.images/keyboard-layout-mini.png)
+= Standard Keyboard bindings
 
 ## Dotfiles Tool
 
