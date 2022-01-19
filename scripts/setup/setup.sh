@@ -3,7 +3,7 @@
 # FUNCTIONS
 
 function add_ppa_if_absent_then_install() {
-    if ! [ apt show $1 ]
+    if ! apt show $1
     then
         sudo add-apt-repository -y $2
         sudo apt update
@@ -20,7 +20,7 @@ function ask_execution() {
     echo "EXECUTE $2? [Y/n]"
     read awnser
 
-    if ! [ "$awnser" == "n" ]
+    if [ ! "$awnser" == "n" ]
     then
         $1
     fi
@@ -77,9 +77,11 @@ function install_java() {
 }
 
 function install_scala() {
+    :
 }
 
 function install_kotlin() {
+    :
 }
 
 function install_ruby() {
@@ -87,6 +89,7 @@ function install_ruby() {
 }
 
 function install_python() {
+    :
 }
 
 function install_chrome() {
@@ -151,6 +154,8 @@ if [ "$awnser" == "laptop"]
 then
     $device = "laptop"
 fi
+
+cd ~
 
 init_apt
 
