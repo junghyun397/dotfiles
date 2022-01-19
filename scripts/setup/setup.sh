@@ -190,3 +190,5 @@ setup_github
 ask_excution ~/scripts/setup/rice-gnome.sh "RICE GNOME"
 ask_excution disable_cups_printer "DISABLE AUTO DISCOVER PRINTERS"
 ask_excution purge_snap "PURGE SNAPD"
+
+echo "DONE! DONT FORGET RESTART."

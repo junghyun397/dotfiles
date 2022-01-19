@@ -1,0 +1,62 @@
+[org/gnome/desktop/wm/keybindings]
+witch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+
+[org/gnome/desktop/wm/preferences]
+num-workspaces=4
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Shift><Super>b'
+command='google-chrome --incognito'
+name='Chrome incognito'
+
+[org/gnome/shell/extensions/auto-move-windows]
+application-list=['discord.desktop:1', 'spotify.desktop:1', 'jetbrains-idea-1.desktop:2', 'jetbrains-clion-1.desktop:2', 'minecraft-launcher.desktop:4']
+
+[org/gnome/shell/extensions/unite]
+app-menu-ellipsize-mode='start'
+desktop-name-text='do1phin desktop'
+enable-titlebar-actions=true
+extend-left-box=false
+greyscale-tray-icons=true
+hide-activities-button='always'
+hide-aggregate-menu-arrow=true
+hide-app-menu-icon=false
+hide-window-titlebars='always'
+restrict-to-primary-screen=false
+show-window-buttons='always'
+show-window-title='always'
+window-buttons-placement='first'
+window-buttons-theme='vimix'
+
+[org/gnome/terminal/legacy]
+default-show-menubar=false
+headerbar=@mb false
+menu-accelerator-enabled=false
+shortcuts-enabled=true
+
+[org/gnome/terminal/legacy/profiles:]
+default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=true
+background-color='rgb(46,52,54)'
+background-transparency-percent=7
+bold-color='#9393a1a1a1a1'
+bold-color-same-as-fg=true
+bold-is-bright=false
+font='DejaVu Sans Mono for Powerline 11'
+foreground-color='rgb(211,215,207)'
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+scrollback-lines=20000
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
