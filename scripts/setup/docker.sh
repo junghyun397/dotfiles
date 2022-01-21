@@ -6,6 +6,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli
 
+# usermod
 sudo groupadd docker
 sudo usermod -aG docker $USER
 

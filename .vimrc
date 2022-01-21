@@ -1,6 +1,7 @@
 " SYSTEM
 set nocompatible
 set belloff=all
+set shell=zsh
 
 " SEARCH
 set ic

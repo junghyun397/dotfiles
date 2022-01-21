@@ -62,7 +62,7 @@ function placement_dotfiles() {
 }
 
 function install_gnome_basics() {
-    sudo apt install -y xdotool x11-xserver-utils gnome-tweak gnome-shell-extensions
+    sudo apt install -y xdotool x11-xserver-utils gnome-tweaks gnome-shell-extensions
 }
 
 function setup_github() {
@@ -131,7 +131,7 @@ function setup_wireshark() {
 
 function install_bottom {
     curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.4/bottom_0.6.4_amd64.deb
-    sudo gdebi bottom_0.6.4_amd64.deb
+    sudo gdebi -n bottom_0.6.4_amd64.deb
 }
 
 # FIXES
@@ -167,9 +167,10 @@ install_utils
 
 install_gnome_basics
 
+~/scripts/setup/zsh.sh
+
 placement_dotfiles $device
 
-~/scripts/setup/zsh.sh
 ~/scripts/setup/vim.sh
 ~/scripts/setup/ime.sh
 

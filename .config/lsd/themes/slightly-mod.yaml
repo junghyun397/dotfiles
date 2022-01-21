@@ -1,17 +1,17 @@
-user: white
-group: white
+user: 7
+group: 7
 permission:
   read: 2
   write: 3
   exec: 1
   exec-sticky: 5
-  no-access: white
+  no-access: 7
 date:
   hour-old: 40
   day-old: 42
   older: 36
 size:
-  none: white
+  none: 7
   small: 3
   medium: 5
   large: 1
