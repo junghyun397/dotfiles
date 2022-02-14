@@ -1,5 +1,5 @@
-user: 7
-group: 7
+user: 252
+group: 252
 permission:
   read: 2
   write: 3

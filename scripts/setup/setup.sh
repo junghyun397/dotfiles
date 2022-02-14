@@ -77,7 +77,11 @@ function install_java() {
 }
 
 function install_scala() {
-    :
+    echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
+    echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee /etc/apt/sources.list.d/sbt_old.list
+    curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add
+    sudo apt update
+    sudo apt install -y sbt
 }
 
 function install_kotlin() {
@@ -89,6 +93,10 @@ function install_ruby() {
 }
 
 function install_python() {
+    :
+}
+
+function setup_flutter() {
     :
 }
 
@@ -177,7 +185,6 @@ placement_dotfiles $device
 ~/scripts/setup/docker.sh
 
 ~/scripts/setup/fonts.sh
-~/scripts/setup/spotify.sh
 ~/scripts/setup/discord.sh
 
 install_wireshark
@@ -189,8 +196,18 @@ install_vlc
 install_gimp
 install_blender
 
+# SDKS
+install_java
+install_scala
+install_kotlin
+install_ruby
+install_python
 install_tex
 
+setup_flutter
+
+# LOGINS
+~/scripts/setup/spotify.sh
 setup_github
 
 ask_execution ~/scripts/setup/rice-gnome.sh "RICE GNOME"

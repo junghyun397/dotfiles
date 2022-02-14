@@ -20,6 +20,7 @@ set title
 
 " INDENT
 filetype plugin indent on
+set sw=4
 set ai
 set si
 set et
@@ -29,6 +30,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
+" NERD-TREE
+Plugin 'preservim/nerdtree'
+nnoremap <C-n> :NERDTree<CR>
 
 " VIM-FUGITIVE
 Plugin 'tpope/vim-fugitive'
@@ -47,6 +52,9 @@ let g:airline_powerline_fonts=1
 " VIM-EXPAND-REGION
 Plugin 'terryma/vim-expand-region'
 vmap <C-W> <Plug>(expand_region_expand)
+
+" YCM
+Plugin 'Valloric/YouCompleteMe'
 
 " ELDNUV
 call vundle#end()

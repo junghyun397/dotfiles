@@ -116,3 +116,4 @@ alias dft="~/scripts/dotfiles-tool.sh"
 # openrgb
 alias rgbon="openrgb --profile blue"
 alias b6gd="openrgb --profile b6gd"
+. "$HOME/.cargo/env"

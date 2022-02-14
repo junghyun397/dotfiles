@@ -17,6 +17,11 @@ set showmode
 set selectmode=refactoring
 set idearefactormode=keep
 
+set NERDTree
+nnoremap <C-n> :NERDTree<CR>
+
+nnoremap <C-a> :
+
 " KEYMAP
 sethandler <C-2> a:vim
 sethandler <C-S-2> a:vim
@@ -25,15 +30,19 @@ sethandler <C-A> a:vim
 sethandler <C-B> a:vim
 sethandler <C-C> a:vim
 sethandler <C-D> a:vim
+
 " recent files
 sethandler <C-E> a:ide
+
 sethandler <C-F> a:vim
 sethandler <C-G> a:vim
 sethandler <C-H> a:vim
 sethandler <C-I> a:vim
 sethandler <C-J> a:vim
+
 " commit
 sethandler <C-K> a:ide
+
 sethandler <C-L> a:vim
 sethandler <C-M> a:vim
 sethandler <C-N> a:vim
@@ -45,8 +54,10 @@ sethandler <C-S> a:vim
 sethandler <C-T> a:vim
 sethandler <C-U> a:vim
 sethandler <C-V> a:vim
+
 " extend selection => SELECT MODE
 sethandler <C-W> v:ide
+
 sethandler <C-X> a:vim
 sethandler <C-Y> a:vim
 sethandler <C-[> a:vim

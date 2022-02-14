@@ -23,7 +23,7 @@ Test matrix:
 Via Semi-Automatic script (A simple action is required to gdebi and install GNOME-extension.)
 
 ```shell
-wget https://raw.githubusercontent.com/junghyun397/dotfiles/desktop/scripts/setup/setup.sh -O - | bash
+bash <(wget -qO- https://raw.githubusercontent.com/junghyun397/dotfiles/desktop/scripts/setup/setup.sh)
 ```
 
 Dotfiles only
@@ -38,12 +38,7 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 
 Powered by [``keyd``](https://github.com/rvaiya/keyd)
 
-![1800-keyboard](.images/keyboard-layout.png)
-= 1800 or CP Layout Keyboard bindings
-
-
 ![standard-keyboard](.images/keyboard-layout-mini.png)
-= Standard Keyboard bindings
 
 ## Dotfiles Tool
 
