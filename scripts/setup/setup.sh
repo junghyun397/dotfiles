@@ -137,6 +137,11 @@ function setup_wireshark() {
     sudo adduser $USER wireshark
 }
 
+function install_obs() {
+    sudo apt install -y ffmpeg
+    add_ppa_if_absent_then_install obs-studio ppa:obsproject/obs-studio
+}
+
 function install_bottom {
     curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.4/bottom_0.6.4_amd64.deb
     sudo gdebi -n bottom_0.6.4_amd64.deb
