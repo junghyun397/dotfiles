@@ -55,7 +55,7 @@ function install_utils() {
     sudo apt install -y tldr screenfetch tree fzf
 }
 
-function palcement_zsh_sh() {
+function placement_zsh_sh() {
     wget -O ~/scripts/setup/zsh.sh https://raw.githubusercontent.com/junghyun397/dotfiles/desktop/scripts/setup/zsh.sh
     chmod a+x ~/scripts/setup/zsh.sh
 }
@@ -147,6 +147,11 @@ function install_obs() {
     add_ppa_if_absent_then_install obs-studio ppa:obsproject/obs-studio
 }
 
+function install_zoom {
+    curl -LO https://zoom.us/client/latest/zoom_amd64.deb
+    sudo gdebi -n zoom_amd64.deb
+}
+
 function install_bottom {
     curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.4/bottom_0.6.4_amd64.deb
     sudo gdebi -n bottom_0.6.4_amd64.deb
@@ -206,6 +211,8 @@ install_jetbrains_toolbox
 install_vlc
 install_gimp
 install_blender
+install_obs
+install_zoom
 
 # SDKS
 install_java

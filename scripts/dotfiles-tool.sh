@@ -21,7 +21,9 @@ then
 elif [ "$1" == "diff" ]
 then
     git --git-dir=$HOME/.dotfiles diff
-
+elif [ "$1" == "prefix" ]
+then
+    git --git-dir=$HOME/.dotfiles --work-tree=$HOME "${*:2}"
 else
     exit 128
 fi

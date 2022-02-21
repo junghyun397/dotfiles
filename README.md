@@ -81,3 +81,16 @@ equal to
 ```shell
 git --git-dir=$HOME/.dotfiles diff
 ```
+
+### Prefix
+
+```shell
+dft prefix $COMMAND
+```
+
+equal to
+
+```shell
+git --git-dir=$HOME/.dotfiles --work-tree=$HOME $COMMAND
+```
+
