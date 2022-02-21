@@ -56,8 +56,14 @@ function install_utils() {
 }
 
 function placement_zsh_sh() {
+    mkdir -p ~/scripts/setup/
     wget -O ~/scripts/setup/zsh.sh https://raw.githubusercontent.com/junghyun397/dotfiles/desktop/scripts/setup/zsh.sh
     chmod a+x ~/scripts/setup/zsh.sh
+}
+
+function clean_zsh_sh() {
+    rm ~/.zshrc
+    rm ~/scripts/setup/zsh.sh
 }
 
 function placement_dotfiles() {
@@ -192,6 +198,7 @@ install_gnome_basics
 
 placement_zsh_sh
 ~/scripts/setup/zsh.sh
+clean_zsh_sh
 
 placement_dotfiles $device
 
