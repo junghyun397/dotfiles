@@ -5,7 +5,7 @@
  - [ ] 3M 1584 자가접착 압박붕대 1EA
  - [ ] 대한 멸균거즈 2인치 2EA
  - [ ] 대한 아이콘액 20mL 2EA
- - [ ] CAT Rev.7 전투용 지혈대 1EA
+ - [ ] CAT gen.7 Tourniquet 1EA
 
 ### 소독
 

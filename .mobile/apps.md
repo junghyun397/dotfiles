@@ -1,81 +1,82 @@
 ### REMOTE
 
 - [ ] Tile
-  - [ ] LOGIN
+  - [ ] 로그인
+  - [ ] 페어링
 - [ ] Beats
-  - [ ] CONNECT
+  - [ ] 페어링
 - [ ] KDE Connect
-  - [ ] PAIR
+  - [ ] 페어링
 - [ ] Juice SSH
-  - [ ] PROFILES
+  - [ ] 복구
 
-### PRINCIPLE
+### BASICS
 
-- [ ]dGuard
-  - [ ] INSTALL
-  - [ ] HTTPS
+- [ ] AdGuard
+  - [ ] 설치
+  - [ ] HTTPS 필터링 활성화
 - [ ] Google lens
 
 ### GOV
 
 - [ ] 신한 SOL
-  - [ ] CERTIFICATION
+  - [ ] 인증
 - [ ] PASS
-  - [ ] CERTIFICATION
+  - [ ] 인증
 - [ ] COOV
-  - [ ] CERTIFICATION
+  - [ ] 인증
 
 ### TEXTING
 
 - [ ] 카카오톡
-  - [ ] LOGIN
-  - [ ] RESTORE
-  - [ ] SETUP
+  - [ ] 로그인
+  - [ ] 복구
+  - [ ] 설정
 - [ ] Discord
-  - [ ] LOGIN
+  - [ ] 로그인
 - [ ] Google Translation
-  - [ ] SETUP
+  - [ ] 설정
 
 ### PLAYER
 
 - [ ] kindle
-  - [ ] LOGIN
+  - [ ] 로그인
 - [ ] Spotify
-  - [ ] LOGIN
-  - [ ] SETUP
+  - [ ] 로그인
+  - [ ] 설정
 
 ### SCHEDULE
 
 - [ ] Todoist
-  - [ ] LOGIN
+  - [ ] 로그인
 - [ ] Sleepyti.me
 
 - [ ] VLC
-  - [ ] SETUP
+  - [ ] 설정
 - [ ] 한컴뷰어
-  - [ ] SETUP
+  - [ ] 설정
 
 ### MAPS
 
 - [ ] 네이버지도
-  - [ ] LOGIN
-  - [ ] SETUP
+  - [ ] 로그인
+  - [ ] 설정
 - [ ] 지하철 종결자
 - [ ] 전국 스마트 버스
 
 ### MARKET
 
 - [ ] 당근마켓
-  - [ ] LOGIN
+  - [ ] 로그인
 - [ ] Steam
-  - [ ] STEAM GUARD
+  - [ ] 스팀가드 복구
 
 ### GAME
 
 - [ ] lichess
-  - [ ] LOGIN
+  - [ ] 로그인
 - [ ] Dr. Gomoku
-  - [ ] LOGIN
+  - [ ] 로그인
 
 ### PURGE
 

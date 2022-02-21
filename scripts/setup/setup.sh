@@ -55,6 +55,11 @@ function install_utils() {
     sudo apt install -y tldr screenfetch tree fzf
 }
 
+function palcement_zsh_sh() {
+    wget -O ~/scripts/setup/zsh.sh https://raw.githubusercontent.com/junghyun397/dotfiles/desktop/scripts/setup/zsh.sh
+    chmod a+x ~/scripts/setup/zsh.sh
+}
+
 function placement_dotfiles() {
     git clone -b $1 --bare https://github.com/junghyun397/dotfiles.git $HOME/.dotfiles
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
@@ -180,6 +185,7 @@ install_utils
 
 install_gnome_basics
 
+placement_zsh_sh
 ~/scripts/setup/zsh.sh
 
 placement_dotfiles $device
