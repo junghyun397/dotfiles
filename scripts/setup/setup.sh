@@ -154,13 +154,13 @@ function install_obs() {
 }
 
 function install_zoom {
-    curl -LO https://zoom.us/client/latest/zoom_amd64.deb
-    sudo gdebi -n zoom_amd64.deb
+    wget -P ~/Downloads https://zoom.us/client/latest/zoom_amd64.deb
+    sudo apt install -y ~/Downloads/zoom_amd64.deb
 }
 
 function install_bottom {
-    curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.4/bottom_0.6.4_amd64.deb
-    sudo gdebi -n bottom_0.6.4_amd64.deb
+    wget -P ~/Downloads https://github.com/ClementTsang/bottom/releases/download/0.6.4/bottom_0.6.4_amd64.deb
+    sudo apt install -y ./Downloads/bottom_0.6.4_amd64.deb
 }
 
 # FIXES

@@ -4,11 +4,10 @@
 sudo pip3 install liquidctl
 
 # OpenRGB
-wget https://openrgb.org/releases/release_0.7/openrgb_0.7_amd64_buster_6128731.deb
-sudo gdebi openrgb_0.7_amd64_buster_6128731.deb
+wget -P ~/Downloads https://openrgb.org/releases/release_0.7/openrgb_0.7_amd64_buster_6128731.deb
+sudo apt install ~/Downloads/openrgb_0.7_amd64_buster_6128731.deb
 
 # systemctl register
-
 sudo cp ~/.raws/hwcontrols.service /etc/systemd/system/hwcontrols.service
 sudo sed -i "s;uname;$USERNAME;g" /etc/systemd/system/hwcontrols.service
 
