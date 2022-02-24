@@ -48,7 +48,7 @@ function install_build_tools() {
 }
 
 function install_package_managers() {
-    sudo apt install -y cargo gdebi python3-pip ppa-purge
+    sudo apt install -y gdebi python3-pip ppa-purge
 }
 
 function install_utils() {
@@ -107,6 +107,10 @@ function install_python() {
     :
 }
 
+function setup_rust() {
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+}
+
 function setup_flutter() {
     :
 }
@@ -155,12 +159,12 @@ function install_obs() {
 
 function install_zoom {
     wget -P ~/Downloads https://zoom.us/client/latest/zoom_amd64.deb
-    sudo apt install -y ~/Downloads/zoom_amd64.deb
+    sudo gdebi -n ~/Downloads/zoom_amd64.deb
 }
 
 function install_bottom {
     wget -P ~/Downloads https://github.com/ClementTsang/bottom/releases/download/0.6.4/bottom_0.6.4_amd64.deb
-    sudo apt install -y ./Downloads/bottom_0.6.4_amd64.deb
+    sudo gdebi -n ./Downloads/bottom_0.6.4_amd64.deb
 }
 
 # FIXES
@@ -230,6 +234,7 @@ install_python
 install_tex
 
 setup_flutter
+setup_rust
 
 # LOGINS
 ~/scripts/setup/spotify.sh

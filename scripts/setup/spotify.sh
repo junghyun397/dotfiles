@@ -7,9 +7,11 @@ sudo apt update
 sudo apt install -y spotify-client
 
 # Spotify-tui
+cd /tmp
 git clone https://github.com/Rigellute/spotify-tui.git
 cd spotify-tui
 cargo install spotify-tui
+cd ~
 
 cp ~/.raws/spt.desktop ~/.local/share/applications/spt.desktop
 sed -i "s;uname;$USERNAME;g" .local/share/applications/spt.desktop

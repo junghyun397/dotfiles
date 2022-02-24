@@ -34,6 +34,7 @@ Plugin 'VundleVim/Vundle.vim'
 " NERD-TREE
 Plugin 'preservim/nerdtree'
 nnoremap <C-n> :NERDTree<CR>
+let NERDTreeMinimalUI=1
 
 " VIM-FUGITIVE
 Plugin 'tpope/vim-fugitive'
