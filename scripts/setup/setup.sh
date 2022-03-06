@@ -95,24 +95,16 @@ function install_scala() {
     sudo apt install -y sbt
 }
 
-function install_kotlin() {
-    :
-}
-
 function install_ruby() {
     sudo apt install -y ruby-full
 }
 
 function install_python() {
-    :
+    sudo apt install -y pypy3
 }
 
 function setup_rust() {
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-}
-
-function setup_flutter() {
-    :
 }
 
 function install_chrome() {
@@ -228,12 +220,10 @@ install_zoom
 # SDKS
 install_java
 install_scala
-install_kotlin
 install_ruby
 install_python
 install_tex
 
-setup_flutter
 setup_rust
 
 # LOGINS

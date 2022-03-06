@@ -14,8 +14,6 @@ set nu
 
 " LOCAL
 set showmode
-set selectmode=refactoring
-set idearefactormode=keep
 
 set NERDTree
 nnoremap <C-n> :NERDTree<CR>
