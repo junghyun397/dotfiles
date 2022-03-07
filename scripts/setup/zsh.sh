@@ -17,3 +17,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 wget -P ~/Downloads https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
 sudo gdebi ~/Downloads/lsd_0.21.0_amd64.deb
 
+# highlight
+sudo apt install -y python-pygments
+sudo apt install -y highlight
