@@ -2,6 +2,7 @@
 set nocompatible
 set belloff=all
 set shell=zsh
+set ul=10000
 
 " SEARCH
 set ic

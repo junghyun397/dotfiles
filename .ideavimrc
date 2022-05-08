@@ -1,6 +1,7 @@
 " SYSTEM
 set belloff=all
 set shell=zsh
+set ul=10000
 
 " SEARCH
 set ic
@@ -17,8 +18,6 @@ set showmode
 
 set NERDTree
 nnoremap <C-n> :NERDTree<CR>
-
-nnoremap <C-a> :
 
 " KEYMAP
 sethandler <C-2> a:vim
