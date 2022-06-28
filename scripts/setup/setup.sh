@@ -83,22 +83,6 @@ function setup_github() {
     sudo apt -y install gh
 }
 
-function install_java() {
-    sudo apt install -y openjdk-8-jre openjdk-8-jdk openjdk-17-jre openjdk-17-jdk
-}
-
-function install_scala() {
-    echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
-    echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee /etc/apt/sources.list.d/sbt_old.list
-    curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add
-    sudo apt update
-    sudo apt install -y sbt
-}
-
-function install_ruby() {
-    sudo apt install -y ruby-full
-}
-
 function install_python() {
     sudo apt install -y pypy3
 }
@@ -218,9 +202,6 @@ install_obs
 install_zoom
 
 # SDKS
-install_java
-install_scala
-install_ruby
 install_python
 install_tex
 
