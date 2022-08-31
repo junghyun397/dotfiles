@@ -4,8 +4,8 @@
 sudo pip3 install liquidctl
 
 # OpenRGB
-wget -P ~/Downloads https://openrgb.org/releases/release_0.7/openrgb_0.7_amd64_buster_6128731.deb
-sudo gdebi -n ~/Downloads/openrgb_0.7_amd64_buster_6128731.deb
+sudo add-apt-repository ppa:thopiekar/openrgb
+sudo apt install openrgb -y
 
 # systemctl register
 sudo cp ~/.raws/hwcontrols.service /etc/systemd/system/hwcontrols.service

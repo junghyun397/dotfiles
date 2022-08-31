@@ -121,6 +121,10 @@ alias rgbon="openrgb --profile blue"
 alias b6gd="openrgb --profile b6gd"
 . "$HOME/.cargo/env"
 
+# docker compose
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
