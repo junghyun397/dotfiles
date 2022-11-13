@@ -25,7 +25,10 @@ sethandler <C-2> a:vim
 sethandler <C-S-2> a:vim
 sethandler <C-S-6> a:vim
 sethandler <C-A> a:vim
-sethandler <C-B> a:vim
+
+" GOTO
+sethandler <C-B> a:ide
+
 sethandler <C-C> a:vim
 sethandler <C-D> a:vim
 
