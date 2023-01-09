@@ -11,12 +11,12 @@ Test matrix:
 
 | Distro | Hardware | Branch | Issue |
 | ------ | -------- | ------ | ----- |
-| Ubuntu 20.04 | VirtualBox amd64 | ``desktop`` | :heavy_check_mark: |
-| Pop!_OS 21.10 | Ryzen + Nvidia Desktop[^desktop-specification] | ``desktop`` | :heavy_check_mark: |
-| Pop!_OS 21.10 | DELL XPS 13 9350 UHD[^laptop-specification] | ``laptop`` | :heavy_check_mark: |
+| Ubuntu 22.04 | VirtualBox amd64 | ``desktop`` | :heavy_check_mark: |
+| Pop!_OS 22.04 | Ryzen + Nvidia Desktop[^desktop-specification] | ``desktop`` | :heavy_check_mark: |
+| Pop!_OS 22.04 | DELL XPS 13 9350 UHD[^laptop-specification] | ``laptop`` | :heavy_check_mark: |
 
-[^desktop-specification]: AMD Ryzen 1700, Nvidia Geforce GTX1080, Samsung DDR4 32GB, ASUS Crosshair VI, HP EX920 NVMe 1TB, Corsair H100i pro XT
-[^laptop-specification]: Intel i7-6560u, DDR4 8GB, UHD touch 3200x1800
+[^desktop-specification]: AMD Ryzen 1700, Nvidia Geforce GTX1080, DDR4 32GB, ASUS Crosshair VI HERO, HP EX920 NVMe 1TB, Corsair H100i pro XT
+[^laptop-specification]: Intel i7-6560u, DDR4 8GB, UHD touchscreen 3200x1800
 
 ## Getting Started
 
@@ -44,19 +44,19 @@ Powered by [``keyd``](https://github.com/rvaiya/keyd)
 
 Alias ``dft`` for [``scripts/dotfiles-tool.sh``](https://github.com/junghyun397/dotfiles/blob/desktop/scripts/dotfiles-tool.sh)
 
-### Add an file
+### Git Prompt
 
 ```shell
-dft add $FILE 
+dft git ...
 ```
 
 equal to
 
 ```shell
-git --git-dir=$HOME/.dotfiles --work-tree=$HOME add $FILE
+git --git-dir=$HOME/.dotfiles --work-tree=$HOME ...
 ```
 
-### Push to repositoty
+### Push to Repositoty
 
 ```shell
 dft push $MESSAGE
@@ -68,29 +68,5 @@ equal to
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME commit -a -m "$MESSAGE"
 git --git-dir=$HOME/.dotfiles push -u origin $DEVICE
 
-```
-
-### Check diffrence
-
-```shell
-dft diff
-```
-
-equal to
-
-```shell
-git --git-dir=$HOME/.dotfiles diff
-```
-
-### Prefix
-
-```shell
-dft prefix $COMMAND
-```
-
-equal to
-
-```shell
-git --git-dir=$HOME/.dotfiles --work-tree=$HOME $COMMAND
 ```
 
