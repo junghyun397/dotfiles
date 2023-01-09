@@ -78,7 +78,7 @@
 - [ ] Dr. Gomoku
   - [ ] 로그인
 
-### PURGE
+### REMOVE
 
 - [ ] Youtube
 - [ ] Youtube Music
