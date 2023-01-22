@@ -13,3 +13,4 @@ cd ~
 sudo ln ~/.keyd.conf /etc/keyd/default.conf
 sudo systemctl enable keyd
 sudo systemctl start keyd
+

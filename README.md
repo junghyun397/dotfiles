@@ -38,7 +38,7 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 
 Powered by [``keyd``](https://github.com/rvaiya/keyd)
 
-![standard-keyboard](.images/keyboard-layout-mini.png)
+![leopold fc980c](.images/keyboard-layout-980c.png)
 
 ## Dotfiles Tool
 

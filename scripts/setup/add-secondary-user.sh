@@ -10,3 +10,4 @@ ln -s /home/junghyun397/.vim ~/.vim
 cp -r /home/junghyun397/.config/lsd ~/.config/lsd
 
 chsh -s /usr/bin/zsh
+
