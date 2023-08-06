@@ -121,6 +121,7 @@ audio/x-mod=vlc.desktop
 audio/x-s3m=vlc.desktop
 audio/x-xm=vlc.desktop
 x-scheme-handler/mailto=google-chrome.desktop
+application/x-rew=install4j_kr9gb1-roomeqwizard.desktop
 
 [Added Associations]
 x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;

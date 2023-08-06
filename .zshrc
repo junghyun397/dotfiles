@@ -80,7 +80,10 @@ ZSH_THEME='powerlevel10k/powerlevel10k'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(git zsh-syntax-highlighting docker)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-syntax-highlighting)
+plugins=(
+    zsh-syntax-highlighting
+    fzf
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,6 +121,10 @@ alias ccat="highlight -O ansi --force"
 
 # dotfils-tool
 alias dft="~/scripts/dotfiles-tool.sh"
+
+# loopback
+alias pbon="pactl load-module module-loopback latency_msec=0"
+alias pboff="pactl unload-module motule-loopback"
 
 # openrgb
 alias rgbon="openrgb --profile blue"
