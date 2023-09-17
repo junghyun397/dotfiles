@@ -1,0 +1,102 @@
+digraph desksetup {
+    node [shape=box];
+    
+    powerstrip [label="Power strip"];
+
+    charger [label="65W GaN Charger"];
+
+    desktop_pc [label="Desktop PC"];
+    router [label="ASUS AC86U"];
+
+    subgraph cluster_lighting {
+        label="Lighting";
+
+        desklamp [label="Desklamp"];
+        ambient_light [label="LightPack"];
+    }
+    
+    subgraph cluster_monitors {
+        label="Monitors";
+
+        primary_monitor [label="HP X34"];
+        secondary_monitor [label="DELL P2319"];
+    }
+
+    subgraph cluster_audio_system {
+        label="Audio System";
+
+        dac_amp [label="Topping DX3Pro+"];
+        speakers [label="Edifer MR4"];
+        dd_headphones [label="AudioTechnica R70X"];
+        magnetic_headphones [label="Hifiman HE400se"];
+
+        edge [color=blue]
+        
+        dac_amp -> speakers [color=blue label="RCA"];
+        dac_amp -> dd_headphones [color=blue label="AUX"];
+        dac_amp -> magnetic_headphones [color=blue label="AUX"];
+    }
+
+    usb_hub [label="ACASIS USB HUB 7 Port"];
+
+    subgraph cluster_input_devices {
+        label="Input Devices";
+
+        wireless_mouse [label="Logitech G Pro X Superlight"];
+        keyboard [label="Leopold FC980C"];
+        microphone [label="Audio-Technica AT2020USB"];
+        webcam [label="Logitech C920"];
+
+        mouse_charging_dock [label="Logitech Charging Dock"];
+
+        subgraph cluster_game_controllers {
+            label="Game Controllers";
+
+            vkb_blackbox [label="VKBsim BlackBox"];
+            joystick [label="VKBsim Gunfigher MK3"];
+            pedals [label="VKBsim T-Rudder MK4"];
+            throttle [label="VKBsim STECS mini"];
+            headtracker [label="NaturalPoint TrackIR5"];
+            trackclip [label="TrackIR ProClip"];
+
+            vkb_blackbox -> joystick [label="GX12 4pin"];
+            vkb_blackbox -> pedals [label="RJ45"];
+        }
+    }
+    
+    router -> desktop_pc;
+    
+    desktop_pc -> primary_monitor [label="DisplayPort"];
+    desktop_pc -> secondary_monitor [label="DisplayPort"];
+    desktop_pc -> dac_amp;
+
+    desktop_pc -> usb_hub;
+
+    desktop_pc -> keyboard;
+    desktop_pc -> mouse_charging_dock;
+    desktop_pc -> webcam;
+
+    desktop_pc -> ambient_light;
+
+    usb_hub -> vkb_blackbox;
+    usb_hub -> throttle;
+    usb_hub -> headtracker;
+    usb_hub -> trackclip;
+    usb_hub -> microphone;
+
+    mouse_charging_dock -> wireless_mouse;
+   
+    edge [color=red]
+    
+    powerstrip -> desktop_pc;
+    powerstrip -> router;
+    powerstrip -> charger;
+    powerstrip -> primary_monitor;
+    powerstrip -> secondary_monitor;
+    powerstrip -> usb_hub;
+    powerstrip -> dac_amp;
+    powerstrip -> speakers;
+    powerstrip -> desklamp;
+    powerstrip -> ambient_light;
+}
+
