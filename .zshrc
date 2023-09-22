@@ -124,7 +124,7 @@ alias dft="~/scripts/dotfiles-tool.sh"
 
 # loopback
 alias pbon="pactl load-module module-loopback latency_msec=0"
-alias pboff="pactl unload-module motule-loopback"
+alias pboff="pactl unload-module module-loopback"
 
 # openrgb
 alias rgbon="openrgb --profile blue"
