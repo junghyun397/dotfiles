@@ -28,13 +28,11 @@ digraph desksetup {
         dac_amp [label="Topping DX3Pro+"];
         speakers [label="Edifer MR4"];
         dd_headphones [label="AudioTechnica R70X"];
-        magnetic_headphones [label="Hifiman HE400se"];
 
         edge [color=blue]
         
         dac_amp -> speakers [color=blue label="RCA"];
         dac_amp -> dd_headphones [color=blue label="AUX"];
-        dac_amp -> magnetic_headphones [color=blue label="AUX"];
     }
 
     usb_hub [label="ACASIS USB HUB 7 Port"];
@@ -44,7 +42,7 @@ digraph desksetup {
 
         wireless_mouse [label="Logitech G Pro X Superlight"];
         keyboard [label="Leopold FC980C"];
-        microphone [label="Audio-Technica AT2020USB"];
+        microphone [label="Presonus Revelator Dynamic"];
         webcam [label="Logitech C920"];
 
         mouse_charging_dock [label="Logitech Charging Dock"];
