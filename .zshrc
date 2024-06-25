@@ -113,6 +113,9 @@ source $ZSH/oh-my-zsh.sh
 alias ls="lsd"
 alias tree="lsd --tree"
 
+# ccat
+alias cat="ccat"
+
 # dotfils-tool
 alias config="~/scripts/dotfiles-tool.sh" 
 
