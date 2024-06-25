@@ -1,0 +1,15 @@
+- [ ] Chrome
+- [ ] Geforce Driver
+- [ ] Audio Driver
+- [ ] Dark theme
+- [ ] regedit
+  - [ ] HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search DWORD32 BingSearchEnabled 0
+  - [ ] HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation DWORD32 RealTimeIsUniversal 1
+- [ ] 언어 설정 - 한국어 - 옵션 - 하드웨어 키보드 레이아웃 - 한글 키보드 종류 2
+- [ ] Reboot
+- [ ] Kakaotalk
+- [ ] Discord
+- [ ] Steam
+- [ ] OBS
+- [ ] Geforce Experience
+
