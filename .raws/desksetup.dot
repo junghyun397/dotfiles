@@ -1,6 +1,7 @@
 digraph desksetup {
     node [shape=box];
     
+    emi_powerstrip [label="Surge Protection Power Strip"]
     powerstrip [label="Power strip"];
 
     charger [label="65W GaN Charger"];
@@ -51,14 +52,14 @@ digraph desksetup {
             label="Game Controllers";
 
             vkb_blackbox [label="VKBsim BlackBox"];
-            joystick [label="VKBsim Gunfigher MK3"];
+            joystick [label="VKBsim Gunfigher MK4 MCG Ultimate"];
             pedals [label="VKBsim T-Rudder MK4"];
             throttle [label="VKBsim STECS mini"];
             headtracker [label="NaturalPoint TrackIR5"];
             trackclip [label="TrackIR ProClip"];
 
             vkb_blackbox -> joystick [label="GX12 4pin"];
-            vkb_blackbox -> pedals [label="RJ45"];
+            vkb_blackbox -> pedals [label="GX12 4pin"];
         }
     }
     
@@ -85,13 +86,15 @@ digraph desksetup {
     mouse_charging_dock -> wireless_mouse;
    
     edge [color=red]
+
+    emi_powerstrip -> desktop_pc;
+    emi_powerstrip -> primary_monitor;
+    emi_powerstrip -> charger;
+    emi_powerstrip -> usb_hub;
+    emi_powerstrip -> powerstrip;
     
-    powerstrip -> desktop_pc;
     powerstrip -> router;
-    powerstrip -> charger;
-    powerstrip -> primary_monitor;
     powerstrip -> secondary_monitor;
-    powerstrip -> usb_hub;
     powerstrip -> dac_amp;
     powerstrip -> speakers;
     powerstrip -> desklamp;

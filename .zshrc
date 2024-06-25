@@ -109,18 +109,15 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# xdg-open
-alias xopen="xdg-open"
-
 # lsd
 alias ls="lsd"
 alias tree="lsd --tree"
 
 # highlight
-alias ccat="highlight -O ansi --force"
+alias cat="ccat"
 
 # dotfils-tool
-alias dft="~/scripts/dotfiles-tool.sh"
+alias config="~/scripts/dotfiles-tool.sh"
 
 # loopback
 alias pbon="pactl load-module module-loopback latency_msec=0"
@@ -129,7 +126,6 @@ alias pboff="pactl unload-module module-loopback"
 # openrgb
 alias rgbon="openrgb --profile blue"
 alias b6gd="openrgb --profile b6gd"
-. "$HOME/.cargo/env"
 
 # docker compose
 alias dcu="docker compose up -d"
@@ -138,3 +134,4 @@ alias dcd="docker compose down"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
