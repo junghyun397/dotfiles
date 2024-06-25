@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Spotify TUI
-Exec=/home/junghyun397/.cargo/bin/spt
-Comment=Spotify for the terminal written in Rust
-Icon=spotify-client
-Type=Application
-Terminal=true
-StartupNotify=false
-Categories=Music;
