@@ -23,12 +23,12 @@ Via semi-automatic script
 
 Desktop:
 ```shell
-bash <(wget -qO- https://raw.githubusercontent.com/junghyun397/dotfiles/desktop/scripts/setup/setup.sh)
+bash < (wget -qO- https://raw.githubusercontent.com/junghyun397/dotfiles/desktop/scripts/setup/setup.sh)
 ```
 
 Laptop:
 ```shell
-bash <(wget -qO- https://raw.githubusercontent.com/junghyun397/dotfiles/laptop/scripts/setup/setup.sh)
+zsh < (wget -qO- https://raw.githubusercontent.com/junghyun397/dotfiles/laptop/scripts/setup/setup.sh)
 ```
 
 Dotfiles only
@@ -41,19 +41,19 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 
 ## Keyboard Layout
 
-Powered by [``keyd``](https://github.com/rvaiya/keyd), [``Karabiner-Elements``](https://github.com/pqrs-org/Karabiner-Elements), [``HammerSpoon``](https://www.hammerspoon.org/)
+Powered by [``keyd``](https://github.com/rvaiya/keyd), [``Karabiner-Elements``](https://github.com/pqrs-org/Karabiner-Elements) and [``HammerSpoon``](https://www.hammerspoon.org/)
 
-![leopold fc980c](.images/keyboard-layout-980c.png)
-![HHKB](.images/keyboard-layout-hhkb.png)
+![ANSI](.images/keyboard-layout-ansi.png)
+![HHKB Studio](.images/keyboard-layout-hhkb-studio.png)
 
 ## Dotfiles Tool
 
-Alias ``dft`` for [``scripts/dotfiles-tool.sh``](https://github.com/junghyun397/dotfiles/blob/desktop/scripts/dotfiles-tool.sh)
+Alias ``config`` for [``scripts/dotfiles-tool.sh``](https://github.com/junghyun397/dotfiles/blob/desktop/scripts/dotfiles-tool.sh)
 
-### Git Prompt
+### Git Promptk
 
 ```shell
-dft git ...
+config git ...
 ```
 
 equal to
@@ -65,13 +65,12 @@ git --git-dir=$HOME/.dotfiles --work-tree=$HOME ...
 ### Push to Repositoty
 
 ```shell
-dft push $MESSAGE
+config push $MESSAGE(optional)
 ```
 
 equal to
 
 ```shell
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME commit -a -m "$MESSAGE"
-git --git-dir=$HOME/.dotfiles push -u origin $DEVICE
-
+git --git-dir=$HOME/.dotfiles push -u origin $CURRENT_BRANCH
 ```
