@@ -1,0 +1,4 @@
+map v LinkHints.activateSelect
+map <space>h goBack
+map <space>l goForward
+

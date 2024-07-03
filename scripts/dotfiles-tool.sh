@@ -1,5 +1,3 @@
-#!/bin/bash
-
 if [ "$1" == "push" ]
 then
     device=git --git-dir=$HOME/.dotfiles --work-tree=$HOME rev-parse --abbrev-ref HEAD

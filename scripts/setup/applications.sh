@@ -6,6 +6,7 @@ brew install gh
 brew install --cask docker
 brew install --cask jetbrains-toolbox
 
+# appstore
 brew install mas
 
 # kakaotalk

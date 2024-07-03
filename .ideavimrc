@@ -13,37 +13,60 @@ set scrolloff=5
 set rnu
 set nu
 
-" LOCAL
+nnoremap <C-n> :NERDTree<CR>
+set NERDTree
+
+" APPEARANCE
 set showmode
 
-set idearefactormode=visual
-set NERDTree
-nnoremap <C-n> :NERDTree<CR>
-
 " KEYMAP
+let mapleader = "\<space>"
+nnoremap <space> <nop>
+
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+
+" IDEA NAVIGATION
+map <leader>h :action Back<cr>
+map <leader>l :action Forward<cr>
+map <leader>e :action GotoFile<cr>
+map <leader><space> :action SearchEverywhere<cr>
+
+map ge :action GotoNextError<cr>
+map gE :action GotoPreviousError<cr>
+map gj :action GotoDeclaration<cr> 
+
+" IDEA EXECUTION
+map <leader>r :action Run<cr>
+map <leader>s :action Stop<cr>
+map <leader>f :action ShowHoverInfo<cr>
+
+" IDEA DEBUG
+map <leader>dd :action Debug<cr>
+map <leader>dm :action ToggleBreakpointAction<cr>
+
+" IDEA REFACTOR
+set idearefactormode=visual
+
+" HANDLER
 sethandler <C-2> a:vim
 sethandler <C-S-2> a:vim
 sethandler <C-S-6> a:vim
 sethandler <C-A> a:vim
-
 " GOTO
 sethandler <C-B> a:ide
-
 sethandler <C-C> a:vim
 sethandler <C-D> a:vim
-
-" recent files
+" RECENT FILES
 sethandler <C-E> a:ide
-
 sethandler <C-F> a:vim
 sethandler <C-G> a:vim
 sethandler <C-H> a:vim
 sethandler <C-I> a:vim
 sethandler <C-J> a:vim
-
-" commit
+" COMMIT
 sethandler <C-K> a:ide
-
 sethandler <C-L> a:vim
 sethandler <C-M> a:vim
 sethandler <C-N> a:vim
@@ -55,10 +78,8 @@ sethandler <C-S> a:vim
 sethandler <C-T> a:vim
 sethandler <C-U> a:vim
 sethandler <C-V> a:vim
-
-" extend selection => SELECT MODE
+" EXTEND SELECTION => SELECT MODE
 sethandler <C-W> v:ide
-
 sethandler <C-X> a:vim
 sethandler <C-Y> a:vim
 sethandler <C-[> a:vim
