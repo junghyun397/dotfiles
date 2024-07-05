@@ -26,6 +26,10 @@ nnoremap <space> <nop>
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+
+nnoremap <leader>4 $
+vnoremap <leader>4 $
 
 " IDEA NAVIGATION
 map <leader>h :action Back<cr>
@@ -48,6 +52,7 @@ map <leader>dm :action ToggleBreakpointAction<cr>
 
 " IDEA REFACTOR
 set idearefactormode=visual
+set ideajoin
 
 " HANDLER
 sethandler <C-2> a:vim

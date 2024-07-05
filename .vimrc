@@ -37,6 +37,9 @@ nnoremap <space> <nop>
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+
+nnoremap <leader>4 $
 
 " VUNDLE
 set rtp+=~/.vim/bundle/Vundle.vim
