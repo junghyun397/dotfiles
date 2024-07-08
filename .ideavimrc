@@ -1,3 +1,4 @@
+" set tai to find action id
 " SYSTEM
 set belloff=all
 set shell=zsh
@@ -23,13 +24,11 @@ set showmode
 let mapleader = "\<space>"
 nnoremap <space> <nop>
 
-nnoremap <leader>y "+y
-vnoremap <leader>y "+y
+noremap <leader>y "+y
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 
-nnoremap <leader>4 $
-vnoremap <leader>4 $
+noremap <leader>4 $
 
 " IDEA NAVIGATION
 map <leader>h :action Back<cr>
@@ -48,20 +47,19 @@ map <leader>f :action ShowHoverInfo<cr>
 
 " IDEA DEBUG
 map <leader>dd :action Debug<cr>
-map <leader>dm :action ToggleBreakpointAction<cr>
+map <leader>dm :action ToggleLineBreakpoint<cr>
 
 " IDEA REFACTOR
 set idearefactormode=visual
 set ideajoin
 
+" PLUGINS
+set surround
+
 " HANDLER
-sethandler <C-2> a:vim
-sethandler <C-S-2> a:vim
-sethandler <C-S-6> a:vim
-sethandler <C-A> a:vim
 " GOTO
 sethandler <C-B> a:ide
-sethandler <C-C> a:vim
+sethandler <C-U> a:vim
 sethandler <C-D> a:vim
 " RECENT FILES
 sethandler <C-E> a:ide
@@ -77,6 +75,7 @@ sethandler <C-M> a:vim
 sethandler <C-N> a:vim
 sethandler <C-O> a:vim
 sethandler <C-P> a:vim
+" KILL
 sethandler <C-Q> a:ide
 sethandler <C-R> a:vim
 sethandler <C-S> a:vim

@@ -34,12 +34,11 @@ set et
 let mapleader = "\<space>"
 nnoremap <space> <nop>
 
-nnoremap <leader>y "+y
-vnoremap <leader>y "+y
+noremap <leader>y "+y
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 
-nnoremap <leader>4 $
+noremap <leader>4 $
 
 " VUNDLE
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -49,6 +48,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " NERD-TREE
 Plugin 'preservim/nerdtree'
+
+" SURROUND
+Plugin 'tpope/vim-surround'
 
 " VIM-FUGITIVE
 Plugin 'tpope/vim-fugitive'
