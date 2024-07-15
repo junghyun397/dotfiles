@@ -1,8 +1,10 @@
 " SYSTEM
-set nocompatible
 set belloff=all
 set shell=zsh
 set ul=10000
+
+set nocompatible
+set bs=indent,eol,start
 
 " SEARCH
 set ic
@@ -14,9 +16,11 @@ set scrolloff=5
 set rnu
 set nu
 
-" LOCAL
+nnoremap <C-n> :NERDTree<CR>
+let NERDTreeMinimalUI=1
+
+" APPEARANCE
 syntax on
-set noshowmode
 set title
 
 " INDENT
@@ -26,6 +30,16 @@ set ai
 set si
 set et
 
+" KEYMAP
+let mapleader = "\<space>"
+nnoremap <space> <nop>
+
+noremap <leader>y "+y
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+
+noremap <leader>4 $
+
 " VUNDLE
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -34,26 +48,22 @@ Plugin 'VundleVim/Vundle.vim'
 
 " NERD-TREE
 Plugin 'preservim/nerdtree'
-nnoremap <C-n> :NERDTree<CR>
-let NERDTreeMinimalUI=1
+
+" SURROUND
+Plugin 'tpope/vim-surround'
 
 " VIM-FUGITIVE
 Plugin 'tpope/vim-fugitive'
-
-" VIM-COMMAND-T
-Plugin 'git://git.wincent.com/command-t.git'
-
-" VIM-SPARKUP
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " VIM-AIRLINE
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
+set noshowmode
 
 " VIM-EXPAND-REGION
 Plugin 'terryma/vim-expand-region'
-vmap <C-W> <Plug>(expand_region_expand)
+vnoremap <C-W> <Plug>(expand_region_expand)
 
 " YCM
 Plugin 'Valloric/YouCompleteMe'
