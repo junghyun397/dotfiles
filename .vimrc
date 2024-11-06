@@ -40,6 +40,8 @@ nnoremap <leader>P "+P
 
 noremap <leader>4 $
 
+noremap gm :call cursor(0, len(getline('.'))/2)<CR>
+
 " VUNDLE
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

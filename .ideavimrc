@@ -30,24 +30,29 @@ nnoremap <leader>P "+P
 
 noremap <leader>4 $
 
-" IDEA NAVIGATION
-map <leader>h :action Back<cr>
-map <leader>l :action Forward<cr>
-map <leader>e :action GotoFile<cr>
-map <leader><space> :action SearchEverywhere<cr>
+noremap gm :call cursor(0, len(getline('.'))/2)<CR>
 
-map ge :action GotoNextError<cr>
-map gE :action GotoPreviousError<cr>
-map gj :action GotoDeclaration<cr> 
+" IDEA NAVIGATION
+noremap <leader>h :action Back<cr>
+noremap <leader>l :action Forward<cr>
+noremap <leader>e :action GotoFile<cr>
+noremap <leader><space> :action SearchEverywhere<cr>
+
+noremap ge :action GotoNextError<cr>
+noremap gE :action GotoPreviousError<cr>
+noremap gj :action GotoDeclaration<cr> 
 
 " IDEA EXECUTION
-map <leader>r :action Run<cr>
-map <leader>s :action Stop<cr>
-map <leader>f :action ShowHoverInfo<cr>
+noremap <leader>r :action Run<cr>
+noremap <leader>s :action Stop<cr>
+noremap <leader>f :action ShowHoverInfo<cr>
 
 " IDEA DEBUG
-map <leader>dd :action Debug<cr>
-map <leader>dm :action ToggleLineBreakpoint<cr>
+noremap <leader>dd :action Debug<cr>
+noremap <leader>dm :action ToggleLineBreakpoint<cr>
+
+" IDEA VCS
+noremap <leader>u :action Vcs.RollbackChangedLines<cr>
 
 " IDEA REFACTOR
 set idearefactormode=visual

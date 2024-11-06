@@ -8,6 +8,8 @@ brew install --cask temurin@17
 
 # rust/cargo
 brew install rust
+brew install rustup
+rustup default stable
 
 # Haskell/stack
 brew install ghc
