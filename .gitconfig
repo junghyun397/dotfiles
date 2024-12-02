@@ -2,8 +2,8 @@
 	name = junghyun397
 	email = junghyun397@gmail.com
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	di = diff
-	st = status
+        co = checkout
+        cob = checkout -b
+        s = stash
+        sa = stash apply
+
