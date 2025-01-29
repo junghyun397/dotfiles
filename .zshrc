@@ -109,6 +109,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# git
+alias g="git"
+
 # lsd
 alias ls="lsd"
 alias tree="lsd --tree"
@@ -117,7 +120,7 @@ alias tree="lsd --tree"
 alias cat="ccat"
 
 # dotfils-tool
-alias config="~/scripts/dotfiles-tool.sh"
+alias dotfiles="~/scripts/dotfiles-tool.sh"
 
 # loopback
 alias pbon="pactl load-module module-loopback latency_msec=0"

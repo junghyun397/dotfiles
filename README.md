@@ -14,7 +14,7 @@ Test matrix:
 | Pop!_OS 22.04 | Ryzen + Nvidia Desktop[^desktop-specification] | ``desktop`` | :heavy_check_mark: |
 | macOS Sonoma | MacBook Pro M1 Pro[^laptop-specification] | ``laptop`` | :heavy_check_mark: |
 
-[^desktop-specification]: AMD Ryzen 1700, Nvidia Geforce GTX1080, DDR4 32GB, ASUS Crosshair VI HERO, HP EX920 NVMe 1TB, Corsair H100i pro XT
+[^desktop-specification]: AMD Ryzen 5800X3D, Nvidia Geforce GTX3080, DDR4 32GB, ASUS Crosshair VI HERO, HP EX920 NVMe 1TB, Samsung 970 EVO PLUS 2TB, Corsair H100i pro XT, Superflower leadex 650W
 [^laptop-specification]: M1 Pro 10C, 16GB RAM, 1TB SSD
 
 ## Getting Started
