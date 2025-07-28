@@ -24,11 +24,13 @@ set showmode
 let mapleader = "\<space>"
 nnoremap <space> <nop>
 
-noremap <leader>y "+y
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
+map <leader>y "+y
+map <leader>x "+x
+map <leader>c "+c
+map <leader>p "+p
+map <leader>P "+P
 
-noremap <leader>4 $
+map <leader>4 $
 
 " IDEA NAVIGATION
 noremap <leader>h :action Back<cr>

@@ -2,13 +2,10 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-#vim
+# vim
 brew install vim
+brew install nvim
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
 
-cd ~/.vim/bundle/YouCompleteMe
-python3 install.py --all
-cd ~
 

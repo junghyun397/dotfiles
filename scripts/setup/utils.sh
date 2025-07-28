@@ -1,5 +1,5 @@
 brew install bottom
-brew install tldr
+brew install tlrc
 brew install lsd
 brew install ccat
 

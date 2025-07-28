@@ -109,6 +109,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# nvim
+alias vi="nvim"
+
 # lsd
 alias ls="lsd"
 alias tree="lsd --tree"
@@ -117,7 +120,7 @@ alias tree="lsd --tree"
 alias cat="ccat"
 
 # dotfils-tool
-alias config="~/scripts/dotfiles-tool.sh" 
+alias dotfiles="~/scripts/dotfiles-tool.sh" 
 
 # alacritty font size
 alias sfs="~/scripts/alacritty-small-font-size.sh"
@@ -127,5 +130,5 @@ alias lfs="~/scripts/alacritty-large-font-size.sh"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+# cargo
+source $HOME/.cargo/env

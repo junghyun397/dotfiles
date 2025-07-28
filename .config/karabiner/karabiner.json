@@ -202,27 +202,6 @@
                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
                 "rules": [
                     {
-                        "description": "Apps: ESC: no functon in kakaotalk",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.kakao\\.KakaoTalkMac$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "escape",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "f20" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Apps: Control: emacs C-w",
                         "manipulators": [
                             {
@@ -459,17 +438,6 @@
                                 },
                                 "to": [{ "key_code": "right_arrow" }],
                                 "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": ["right_command"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "f13" }],
-                                "type": "basic"
                             }
                         ]
                     }
@@ -486,6 +454,10 @@
                         {
                             "from": { "key_code": "caps_lock" },
                             "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "right_option" },
+                            "to": [{ "key_code": "f13" }]
                         }
                     ]
                 },
@@ -496,7 +468,13 @@
                         "product_id": 22,
                         "vendor_id": 1278
                     },
-                    "ignore": false
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "right_option" },
+                            "to": [{ "key_code": "f13" }]
+                        }
+                    ]
                 },
                 {
                     "identifiers": {
