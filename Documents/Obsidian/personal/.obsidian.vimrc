@@ -9,7 +9,3 @@ map <Space>P "+P
 
 map <Space>4 $
 
-" NAVIGATION
-map <Space>h obcommand app:go-back
-map <Space>l obcommand app:go-foward
-
