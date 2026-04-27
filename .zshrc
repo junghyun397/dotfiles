@@ -132,3 +132,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # cargo
 source $HOME/.cargo/env
+
+# conda
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+

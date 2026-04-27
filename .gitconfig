@@ -6,4 +6,12 @@
         cob = checkout -b
         s = stash
         sa = stash apply
+	rh = reset --hard origin
+	fl = push --force-with-lease
 
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
