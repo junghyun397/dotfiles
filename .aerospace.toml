@@ -43,7 +43,7 @@ alt-o = 'layout horizontal vertical'
 
 alt-space = 'mode select'
 
-alt-quote = 'workspace quote'
+alt-quote = 'workspace q'
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
@@ -54,7 +54,7 @@ alt-9 = 'workspace 9'
 alt-0 = 'workspace 0'
 alt-minus = 'workspace dash'
 
-alt-shift-quote = ['move-node-to-workspace quote', 'workspace quote']
+alt-shift-quote = ['move-node-to-workspace q', 'workspace q']
 alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
 alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
 alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
@@ -71,15 +71,20 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-semicolon = 'mode service'
 
 [workspace-to-monitor-force-assignment]
-quote = 'main'
 1 = 'main'
 2 = 'main'
 3 = 'main'
 4 = 'main'
+
+q = 'main'
+5 = 'main'
+6 = 'main'
+7 = 'main'
+
 8 = 'secondary'
 9 = 'secondary'
 0 = 'secondary'
-dash = 'secondary'
+d = 'secondary'
 
 [mode.service.binding]
 esc = ['reload-config', 'mode main']

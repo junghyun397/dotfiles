@@ -1,8 +1,6 @@
-" set tai to find action id
+" :set trackactionids
 " SYSTEM
-set belloff=all
-set shell=zsh
-set ul=10000
+set noerrorbells
 
 " SEARCH
 set ic
@@ -40,7 +38,12 @@ noremap <leader><space> :action SearchEverywhere<cr>
 
 noremap ge :action GotoNextError<cr>
 noremap gE :action GotoPreviousError<cr>
-noremap gj :action GotoDeclaration<cr> 
+noremap gj :action GotoDeclaration<cr>
+
+vmap v :action EditorSelectWord<cr>
+
+" IDEA VIEW
+nnoremap <leader>t :action ToggleInlayHintsGloballyAction<cr>
 
 " IDEA EXECUTION
 noremap <leader>r :action Run<cr>
@@ -55,6 +58,7 @@ noremap <leader>dm :action ToggleLineBreakpoint<cr>
 noremap <leader>u :action Vcs.RollbackChangedLines<cr>
 
 " IDEA REFACTOR
+noremap <leader>n :action RenameElement<cr>
 set idearefactormode=visual
 set ideajoin
 
@@ -87,7 +91,6 @@ sethandler <C-S> a:vim
 sethandler <C-T> a:vim
 sethandler <C-U> a:vim
 sethandler <C-V> a:vim
-" EXTEND SELECTION => SELECT MODE
 sethandler <C-W> v:ide
 sethandler <C-X> a:vim
 sethandler <C-Y> a:vim
