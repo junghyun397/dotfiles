@@ -12,17 +12,38 @@ local M = {}
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-vim.keymap.set('', '<leader>4', '$')
 
+-- Clipboard
 vim.keymap.set('', '<leader>y', '"+y')
 vim.keymap.set('', '<leader>x', '"+x')
 vim.keymap.set('', '<leader>c', '"+c')
 vim.keymap.set('', '<leader>p', '"+p')
 vim.keymap.set('', '<leader>P', '"+P')
 
+-- Navigation
 vim.keymap.set('n', '<leader>h', '<C-o>')
 vim.keymap.set('n', '<leader>l', '<C-i>')
+vim.keymap.set('', '<leader>4', '$')
 
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+vim.keymap.set('n', 'ge', function ()
+  vim.diagnostic.jump({
+    count = 1,
+    severity = vim.diagnostic.severity.WARN,
+  })
+end)
+vim.keymap.set('n', 'ge', function ()
+  vim.diagnostic.jump({
+    count = -1,
+    severity = vim.diagnostic.severity.WARN,
+  })
+end)
+
+-- Expand
 vim.keymap.set('v', 'v', 'an', { remap = true })
 vim.keymap.set('x', 'v', 'an', { remap = true })
 vim.keymap.set('x', 'V', 'in', { remap = true })

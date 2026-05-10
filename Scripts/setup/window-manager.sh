@@ -1,8 +1,6 @@
-brew install --cask nikitabobko/tap/aerospace homerow
+# tiling/keyboard
+brew install --cask nikitabobko/tap/aerospace homerow karabiner-elements hammerspoon gureumkim
 
-# keyboard
-brew install --cask karabiner-elements hammerspoon
-
-# macos
-brew install --cask discretescroll hiddenbar
+# tweaks
+brew install --cask discretescroll hiddenbar betterdisplay
 

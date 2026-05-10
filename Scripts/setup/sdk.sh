@@ -1,5 +1,5 @@
 # basics
-brew install cmake llvm python go lua
+brew install cmake llvm python go lua r
 
 # JS
 brew install nvm

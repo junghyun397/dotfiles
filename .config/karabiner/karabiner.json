@@ -5,7 +5,7 @@
                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
                 "rules": [
                     {
-                        "description": "Apps: Control: emacs C-w",
+                        "description": "Apps: Control: Emacs C-w",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -271,13 +271,7 @@
                         "product_id": 22,
                         "vendor_id": 1278
                     },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f13" }]
-                        }
-                    ]
+                    "ignore": false
                 },
                 {
                     "identifiers": {
@@ -304,16 +298,18 @@
                         {
                             "from": { "key_code": "caps_lock" },
                             "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f13" }]
                         }
                     ]
                 }
             ],
             "name": "RMetaFn",
             "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "right_option" },
+                    "to": [{ "key_code": "f13" }]
+                }
+            ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]

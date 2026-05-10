@@ -25,7 +25,12 @@ action = "ToggleViMode"
 mode = "Vi"
 key = "Escape"
 
-# tango + solarized dark theme
+[[keyboard.bindings]]
+action = "None"
+mods = "Command"
+key = "T"
+
+# solarized dark theme
 [colors.primary]
 background = '#000000'
 foreground = '#d3d7cf'

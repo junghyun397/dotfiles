@@ -1,8 +1,8 @@
-# shell
-brew install --cask chrome alacritty
+# sync
+brew install --cask google-drive
 
-# dev
-brew install --cask jetbrains-toolbox orbstack
+# browser
+brew install --cask chrome obsidian spotify
 
 # network
 brew install --cask wireshark nordvpn

@@ -9,17 +9,15 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 accordion-padding = 30
 
 default-root-container-layout = 'tiles'
-
 default-root-container-orientation = 'auto'
-
-key-mapping.preset = 'qwerty'
 
 on-focused-monitor-changed = 'move-mouse monitor-lazy-center'
 
+key-mapping.preset = 'qwerty'
+
 [exec]
 inherit-env-vars = true  # If you don't touch "exec" section,
-[exec.env-vars]          # it will fallback to "default-config.toml"
-PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
+env-vars.PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
 
 [mode.main.binding]
 alt-d = 'exec-and-forget open -n /Applications/Alacritty.app'
@@ -27,6 +25,7 @@ alt-b = 'exec-and-forget open -n "/Applications/Google Chrome.app"'
 alt-shift-b = 'exec-and-forget open -n "/Applications/Google Chrome.app" --args --incognito'
 
 alt-slash = 'layout tiles horizontal vertical'
+alt-o = 'layout horizontal vertical'
 alt-comma = 'macos-native-minimize'
 
 alt-h = 'focus --boundaries all-monitors-outer-frame left'
@@ -39,63 +38,55 @@ alt-shift-j = 'join-with down'
 alt-shift-k = 'join-with up'
 alt-shift-l = 'join-with right'
 
-alt-o = 'layout horizontal vertical'
-
 alt-space = 'mode select'
 
-alt-quote = 'workspace q'
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 
+alt-quote = 'workspace q'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 0'
-alt-minus = 'workspace dash'
+alt-minus = 'workspace d'
 
-alt-shift-quote = ['move-node-to-workspace q', 'workspace q']
 alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
 alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
 alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
 alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
+
+alt-shift-quote = ['move-node-to-workspace q', 'workspace q']
 alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
 alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
 alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
+
 alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
 alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 alt-shift-0 = ['move-node-to-workspace 0', 'workspace 0']
-alt-shift-minus = ['move-node-to-workspace dash', 'workspace dash']
+alt-shift-minus = ['move-node-to-workspace d', 'workspace d']
 
 alt-tab = 'workspace-back-and-forth'
-alt-shift-semicolon = 'mode service'
 
 [workspace-to-monitor-force-assignment]
-1 = 'main'
-2 = 'main'
-3 = 'main'
-4 = 'main'
+1 = ['ultragear', 'main']
+2 = ['ultragear', 'main']
+3 = ['ultragear', 'main']
+4 = ['ultragear', 'main']
 
-q = 'main'
-5 = 'main'
-6 = 'main'
-7 = 'main'
+q = ['built-in', 'secondary']
+5 = ['built-in', 'secondary']
+6 = ['built-in', 'secondary']
+7 = ['built-in', 'secondary']
 
-8 = 'secondary'
-9 = 'secondary'
-0 = 'secondary'
-d = 'secondary'
-
-[mode.service.binding]
-esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main']
-f = ['layout floating tiling', 'mode main']
-backspace = ['close-all-windows-but-current', 'mode main']
-
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+8 = ['kuycon', 'secondary']
+9 = ['kuycon', 'secondary']
+0 = ['kuycon', 'secondary']
+d = ['kuycon', 'secondary']
 
 [mode.select.binding]
 h = 'move left'
