@@ -12,7 +12,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^com\\.google\\.Chrome$",
-                                            "^com\\.kakao\\.KakaoTalkMac$"
+                                            "^com\\.kakao\\.KakaoTalkMac$",
+                                            "^org\\.chromium\\.Chromium$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }

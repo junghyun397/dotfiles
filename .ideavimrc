@@ -1,6 +1,7 @@
 " :set trackactionids
 " SYSTEM
 set noerrorbells
+set undolevels=1024
 
 " SEARCH
 set ic
@@ -69,6 +70,7 @@ set ideajoin
 
 " PLUGINS
 set surround
+set VimEverywhere
 
 " HANDLER
 " GOTO

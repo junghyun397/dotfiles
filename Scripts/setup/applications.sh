@@ -12,5 +12,5 @@ brew install mas
 
 # sms
 brew install --cask discord
-mas install 869223134
+mas install 869223134 # kakaotalk
 

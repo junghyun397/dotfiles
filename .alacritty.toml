@@ -17,8 +17,8 @@ size = 13.8
 [[keyboard.bindings]]
 action = "ToggleViMode"
 mode = "AppCursor"
-key = "v"
-mods = "Alt"
+key = "s"
+mods = "Command"
 
 [[keyboard.bindings]]
 action = "ToggleViMode"

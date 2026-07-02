@@ -4,3 +4,8 @@ brew install --cask nikitabobko/tap/aerospace homerow karabiner-elements hammers
 # tweaks
 brew install --cask discretescroll hiddenbar betterdisplay
 
+brew install duti
+
+duti -s "nvim" .py all
+duti -s "nvim" .md all
+

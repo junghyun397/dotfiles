@@ -39,13 +39,19 @@ alias tree="lsd --tree"
 alias cat="ccat"
 
 # dotfils-tool
-alias dotfiles="~/scripts/dotfiles-tool.sh" 
+alias dotfiles="~/Scripts/dotfiles-tool.sh" 
 
 # alacritty font size
-alias sfs="~/scripts/alacritty-small-font-size.sh"
-alias lfs="~/scripts/alacritty-large-font-size.sh"
+alias sfs="~/Scripts/alacritty-small-font-size.sh"
+alias lfs="~/Scripts/alacritty-large-font-size.sh"
+
+# deepseek-claude
+alias clauded="~/Scripts/deepseek-claude.sh"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+
+# 1password
+export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 

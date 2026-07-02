@@ -1,8 +1,7 @@
 # basics
-brew install cmake llvm python go lua r
+brew install cmake llvm python go lua r nvm
 
 # JS
-brew install nvm
 nvm install node
 npm install --global corepack@latest
 corepack enable pnpm
